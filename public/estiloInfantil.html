@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rcuperação Jaildes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@300;400&display=swap"
+        rel="stylesheet" />
+        
+    <style>
+    *,
+        *::before,
+        *::after {
+            margin: 0;
+        }
+        
+   body {background-color:hsl(0, 0%, 99%);
+          align-items: center;
+          background-image: url("fundo.jpg");
+         
+   }
+   
+    h1 { 
+         color: rgba(8, 0, 0, 0.774); 
+         font-size: 80px ;
+           
+         }
+
+     h2 {
+        
+          font-size: 20px ;
+          align-items: center;
+      }
+      h5{
+        color: #faf6f6;
+
+      }
+
+.content{
+    margin-top: 15pt;
+}
+.field-title {
+    font-weight: 400;
+}
+
+.field-value {
+    color: #0f0101;
+    font-weight: 200;
+}
+      div#topo {
+            height: 140px;
+            
+            background-color: rgba(20, 173, 122, 0.856);
+        }
+       
+        div#rodape footer {
+            width: 992px;
+            margin-right: auto;
+            margin-left: auto;
+       
+        }
+
+        div#rodape {
+            background-color: #3c912bab;
+            padding: 3em;
+            height: 25vh;
+        }
+            .limpar {
+                    clear: both;
+                    }
+        p{
+            color: #0e0606;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class = "card-panel teal lighten-2 ">
+        <h5 class="center-align">Seja bem-vindo(a) á Estilo Infantil</h5> 
+      </div>
+    <div id="topo">
+        <header>
+            <h2 Align="center">
+            <script src="cart.js"></script>
+              <h1>Estilo infantil</h1>
+        </header></h2>
+    </div><br><br></body><br>
+    <p>Procurando Roupas Para Seu(a) Pequeno (a) com Ótimos Preços?<br>
+         Visite Nossa Loja e Confira. Para Andar na Moda,<br>
+         Moda Infantil é Sua Loja de Roupas Onlin</p>
+        <h2 Align="center">
+  <section>       
+
+    <p> Compre Roupa Infantil na Loja Estilo Infantil.
+         Vestido Infantil,<br> Roupas de Bebê, Conjunto Infantil,
+          Calças para Menino e Menina e mais. Acesse!</p>
+            <h1>Estilo infantil</h1>
+            <div class="select-container">
+              <select name="busca" id="busca">
+                <option value="text">Você Buscou Por "Roupa Infantil"</option>
+                <option value="menina">Roupa Infantil para Meninas</option>
+                <option value="menino">Roupa Infantil para Meninos</option>
+                <option value="outros">Roupa Infantil para Outros</option>
+              </select>
+     <br>
+            </div>
+     <input type="text" id="input-text">
+        <button onclick="addText()">Enviar</button>
+        <div id="text-list"></div>
+        <script>
+          function validaForm() {
+            alert("Formulário enviado com sucesso!");
+            var confirmacao = confirm("Deseja excluir o item selecionado?");
+            
+            if (confirmacao) {
+              // Código para excluir o item
+              alert("Item excluído com sucesso!");
+            }
+          }
+        </script>
+        
+    <script>
+      
+        function addText() {
+          var inputText = document.getElementById('input-text').value;
+          if (inputText !== '') {
+            var textContainer = document.createElement('div');
+            textContainer.classList.add('text-container');
+    
+            var text = document.createElement('span');
+            text.classList.add('text');
+            text.innerText = inputText;
+    
+            var deleteIcon = document.createElement('span');
+            deleteIcon.classList.add('icons');
+            deleteIcon.innerHTML = '&#10060;';
+            deleteIcon.onclick = function() {
+              textContainer.remove();
+            };
+    
+            var editIcon = document.createElement('span');
+            editIcon.classList.add('icons');
+            editIcon.innerHTML = '&#9998;';
+            editIcon.onclick = function() {
+              document.getElementById('input-text').value = text.innerText;
+              textContainer.remove();
+            };
+    
+            textContainer.appendChild(text);
+            textContainer.appendChild(deleteIcon);
+            textContainer.appendChild(editIcon);
+    
+            document.getElementById('text-list').appendChild(textContainer);
+            document.getElementById('input-text').value = '';
+          }
+        }
+</script> 
+</body>
+</html>
