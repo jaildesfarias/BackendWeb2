@@ -1,7 +1,7 @@
 {
   "name": "estilo-infantil",
   "version": "1.0.0",
-  "description": "descrição-do-seu-projeto",
+  "description": "roupas infantis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

@@ -1,14 +1,10 @@
 const express = require('express');
 const app = express();
-const path = require('path');
+const port = 3020;
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'estiloInfantil.html'));
-});
-
-const port = 3000;
 app.listen(port, () => {
-  console.log(`Servidor iniciado em http://localhost:${port}`);
+  console.log(`Servidor iniciado na porta ${port}`);
 });
+
